@@ -1,0 +1,26 @@
+{
+  "name": "srroc-leaderboard",
+  "version": "1.0.0",
+  "description": "leaderboard for srroc events",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plof27/srroc-leaderboard.git"
+  },
+  "author": "Rose Peck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plof27/srroc-leaderboard/issues"
+  },
+  "homepage": "https://github.com/plof27/srroc-leaderboard#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.21",
+    "morgan": "^1.9.1"
+  }
+}
