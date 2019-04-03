@@ -5,13 +5,13 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 const path = require('path');
 const Data = require("./data");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
 const router = express.Router();
-
-// this is our MongoDB database
-const dbRoute = "mongodb://jelo:a9bc839993@ds151382.mlab.com:51382/jelotest";
+const port = process.env.PORT || 8000;
+const dbRoute = process.env.MONGODB_URI || "";
 
 // connects our back end code with the database
 mongoose.connect(
@@ -89,4 +89,4 @@ app.get("*", (req, res) => {
 });
 
 // launch our backend into a port
-app.listen(8000, () => console.log(`LISTENING ON PORT ${8000}`));
+app.listen(port, () => console.log(`LISTENING ON PORT ${port}`));
