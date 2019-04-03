@@ -115,6 +115,7 @@ class App extends Component {
           <button onClick={() => this.getDataFromDb()}>
             FETCH
           </button>
+        </div>
         <div style={{ padding: "10px" }}>
           <input
             type="text"
