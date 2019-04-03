@@ -21,17 +21,17 @@ mongoose.connect(
 
 let db = mongoose.connection;
 
-db.once("open", () => console.log("connected to the database"));
+db.once("open", () => console.log("Connected to the database"));
 
 // checks if connection with the database is successful
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 // middleware
-app.use(express.static(path.join(__dirname, "client", "build"))); // for serving up the clientside code
-app.use("/api", router); // api endpoint
-app.use(bodyParser.urlencoded({ extended: false })); // logging stuff
+app.use(bodyParser.urlencoded({ extended: false })); // body parsing
 app.use(bodyParser.json());
 app.use(logger("dev"));
+app.use(express.static(path.join(__dirname, "client", "build"))); // for serving up the clientside code
+app.use("/api", router); // api endpoint
 
 // this is our get method
 // this method fetches all available data in our database
@@ -65,6 +65,7 @@ router.delete("/deleteData", (req, res) => {
 // this is our create methid
 // this method adds new data in our database
 router.post("/putData", (req, res) => {
+  console.log(req.body);
   let data = new Data();
 
   const { id, message } = req.body;

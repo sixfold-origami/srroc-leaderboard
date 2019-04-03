@@ -37,7 +37,7 @@ class App extends Component {
   // our first get method that uses our backend api to
   // fetch data from our data base
   getDataFromDb = () => {
-    fetch("http://leaderboard.plof27.com/api/getData")
+    fetch("/api/getData")
       .then(data => data.json())
       .then(res => this.setState({ data: res.data }));
   };
@@ -51,7 +51,7 @@ class App extends Component {
       ++idToBeAdded;
     }
 
-    axios.post("http://leaderboard.plof27.com/api/putData", {
+    axios.post("/api/putData", {
       id: idToBeAdded,
       message: message
     });
@@ -68,7 +68,7 @@ class App extends Component {
       }
     });
 
-    axios.delete("http://leaderboard.plof27.com/api/deleteData", {
+    axios.delete("/api/deleteData", {
       data: {
         id: objIdToDelete
       }
@@ -86,7 +86,7 @@ class App extends Component {
       }
     });
 
-    axios.post("http://leaderboard.plof27.com/api/updateData", {
+    axios.post("/api/updateData", {
       id: objIdToUpdate,
       update: { message: updateToApply }
     });
