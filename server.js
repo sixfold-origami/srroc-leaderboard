@@ -10,7 +10,7 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 const router = express.Router();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 const dbRoute = process.env.MONGODB_URI || "";
 
 // connects our back end code with the database
@@ -65,7 +65,6 @@ router.delete("/deleteData", (req, res) => {
 // this is our create methid
 // this method adds new data in our database
 router.post("/putData", (req, res) => {
-  console.log(req.body);
   let data = new Data();
 
   const { id, message } = req.body;
