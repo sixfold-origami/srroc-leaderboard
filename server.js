@@ -36,6 +36,7 @@ app.use(express.static(path.join(__dirname, "client", "build"))); // for serving
 
 // models and routes
 require('./models/user');
+require('./models/racer');
 require('./config/passport');
 app.use(require('./routes'));
 
