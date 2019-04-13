@@ -34,6 +34,10 @@ app.use(bodyParser.json());
 app.use(logger("dev")); // mogan logging i guess? i never use this T.T
 app.use(express.static(path.join(__dirname, "client", "build"))); // for serving up the clientside code
 
+// models and routes
+require('./models/user');
+require('./config/passport');
+
 // api routes
 app.use('/api/user', userRoute);
 app.use('/api/racer', racerRoute);
