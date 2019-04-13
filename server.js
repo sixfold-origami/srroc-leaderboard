@@ -5,8 +5,8 @@ const path = require('path');
 const logger = require("morgan");
 var cors = require('cors');
 
-const userRoute = require('./routes/user');
-const racerRoute = require('./routes/racer');
+// const userRoute = require('./routes/user');
+// const racerRoute = require('./routes/racer');
 
 require("dotenv").config();
 
@@ -37,10 +37,11 @@ app.use(express.static(path.join(__dirname, "client", "build"))); // for serving
 // models and routes
 require('./models/user');
 require('./config/passport');
+app.use(require('./routes'));
 
 // api routes
-app.use('/api/user', userRoute);
-app.use('/api/racer', racerRoute);
+// app.use('/api/user', userRoute);
+// app.use('/api/racer', racerRoute);
 
 // catch all route for sending client code (SHOULD BE THE LAST ROUTE IN THE FILE)
 app.get("*", (req, res) => {
