@@ -8,7 +8,6 @@ class Home extends Component {
         <h1>
           Welcome home
         </h1>
-        <Link to='/about'>Go to about</Link>
       </div>
     );
   }
