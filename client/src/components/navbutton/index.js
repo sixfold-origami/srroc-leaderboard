@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 const styles = {
   menuButton: {
     marginLeft: 20,
+    color: '#0a0a0a',
   },
 }
 

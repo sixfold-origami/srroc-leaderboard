@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
+import { Typography } from '@material-ui/core';
 
 class Login extends Component {
   render() {
     return (
       <div>
-        <h1>
-          Login
-        </h1>
+        <Typography variant="h1"> Login </Typography>
       </div>
     );
   }

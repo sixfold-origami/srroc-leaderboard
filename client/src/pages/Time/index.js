@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
+import { Typography } from '@material-ui/core';
 
 class Time extends Component {
   render() {
     return (
       <div>
-        <h1>
-          Add Time
-        </h1>
+        <Typography variant="h1"> Add Time </Typography>
       </div>
     );
   }

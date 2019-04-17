@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import { Typography, Button } from '@material-ui/core';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <h1>
-          Welcome home
-        </h1>
+        <Typography variant="h1"> Welcome Home </Typography>
+        <Button variant="contained" color="primary">Button</Button>
       </div>
     );
   }

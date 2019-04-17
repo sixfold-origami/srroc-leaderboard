@@ -12,8 +12,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { withStyles } from '@material-ui/core/styles';
 
-import NavButton from '../NavButton';
-
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -22,6 +20,9 @@ const styles = theme => ({
   paper: {
     marginRight: 5,
   },
+  menuOpenButton: {
+    color: "#0a0a0a",
+  }
 });
 
 class ToggleMenu extends React.Component {
@@ -54,6 +55,7 @@ class ToggleMenu extends React.Component {
           aria-owns={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           onClick={this.handleToggle}
+          className={classes.menuOpenButton}
         >
           Admin
         </Button>
