@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import NavButton from '../navbutton';
+import NavButton from '../NavButton';
+import ToggleMenu from '../ToggleMenu';
 
 class TopBar extends Component {
   render() {
@@ -12,6 +13,7 @@ class TopBar extends Component {
           </Typography>
           <NavButton path="/" text="Home"/>
           <NavButton path="/about" text="About"/>
+          <ToggleMenu />
         </Toolbar>
       </AppBar>
     );

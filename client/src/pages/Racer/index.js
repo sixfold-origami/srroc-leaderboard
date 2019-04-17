@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
-class Home extends Component {
+class Racer extends Component {
   render() {
     return (
       <div>
         <h1>
-          Welcome home
+          Add Racer
         </h1>
       </div>
     );
   }
 }
 
-export default Home;
+export default Racer;
